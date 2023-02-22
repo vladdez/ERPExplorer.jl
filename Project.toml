@@ -24,7 +24,7 @@ Makie = "0.19"
 Pipe = "1"
 StatsBase = "0.33"
 TopoPlots = "0.1.3"
-UnfoldMakie = "0.26"
+UnfoldMakie = "0.2.6"
 julia = "1"
 
 [extras]
