@@ -19,6 +19,18 @@ Currently ERPExplorer.jl has 6 functions:
 - slider_butterfly_topoplot() - combination of butterfly plot and topoplot with voltage changing over time by moving the slider position;
 - toggle_butterfly_topoplot() - combination of butterfly plot and topoplot with a button to toggle between solid and nulticolor mode.
 
+
+## Gallery
+
+### Tutorials
+
+| Function  | How it looks like |
+| ------------- | ------------- |
+| Topoplot   | <img src="https://user-images.githubusercontent.com/33777074/220991361-86e5e38c-2723-4599-a383-163f9faf35a5.gif" width="580" height="500">|
+| click_butterfly_topoplot   | ![topo_butter_clicking](https://user-images.githubusercontent.com/33777074/220991449-0ae94417-72d4-40a3-a249-042d901dcb6f.gif)|
+| menu_butterfly_topoplot   | ![topo_butter_menu](https://user-images.githubusercontent.com/33777074/220991965-48e0fe6e-0340-472c-91ff-c323831932da.gif)|
+| toggle_butterfly_topoplot   |![topo_butter_clicking](https://user-images.githubusercontent.com/33777074/220991984-fe35e84d-400f-472f-805a-69a706fae266.gif) |
+
 ## Citing
 
 See [`CITATION.bib`](CITATION.bib) for the relevant reference(s).
