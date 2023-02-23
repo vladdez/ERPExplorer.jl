@@ -5,7 +5,7 @@
 [![Build Status](https://github.com/vladdez/ERPExplorer.jl/actions/workflows/CI.yml/badge.svg?branch=master)](https://github.com/vladdez/ERPExplorer.jl/actions/workflows/CI.yml?query=branch%3Amaster)
 [![Coverage](https://codecov.io/gh/vladdez/ERPExplorer.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/vladdez/ERPExplorer.jl)
 
-## About ERPExplorer.jl?
+## About ERPExplorer.jl
 
 It is a collection of functions for interactive ERP (event-related potential) visualization.
 
