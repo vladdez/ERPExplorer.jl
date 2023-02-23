@@ -28,8 +28,8 @@ Currently ERPExplorer.jl has 6 functions:
 | ------------- | ------------- |
 | Topoplot   | <img src="https://user-images.githubusercontent.com/33777074/220991361-86e5e38c-2723-4599-a383-163f9faf35a5.gif" width="580" height="500">|
 | click_butterfly_topoplot   | ![topo_butter_clicking](https://user-images.githubusercontent.com/33777074/220991449-0ae94417-72d4-40a3-a249-042d901dcb6f.gif)|
-| menu_butterfly_topoplot   | ![topo_butter_toggle](https://user-images.githubusercontent.com/33777074/220995782-0e8aa601-bab6-4230-9245-bcf3de40cb5c.gif)
-| toggle_butterfly_topoplot   | ![topo_butter_menu](https://user-images.githubusercontent.com/33777074/220991965-48e0fe6e-0340-472c-91ff-c323831932da.gif)| |
+| toggle_butterfly_topoplot    | ![topo_butter_toggle](https://user-images.githubusercontent.com/33777074/220995782-0e8aa601-bab6-4230-9245-bcf3de40cb5c.gif)
+| menu_butterfly_topoplot   | ![topo_butter_menu](https://user-images.githubusercontent.com/33777074/220991965-48e0fe6e-0340-472c-91ff-c323831932da.gif)| |
 
 ## Citing
 
