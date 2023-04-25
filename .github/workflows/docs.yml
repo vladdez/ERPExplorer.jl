@@ -34,13 +34,14 @@ jobs:
       uses: julia-actions/setup-julia@v1
       with:
         version: '1'
-    - name: Build and deploy docs
+    
     
     - uses: julia-actions/julia-buildpkg@v1
     - uses: julia-actions/julia-docdeploy@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - run: >
+    - name: Build and deploy docs
+      run: >
           cd docs;
           DISPLAY=:0 xvfb-run -s '-screen 0 1024x768x24'
           julia --color=yes  --project=docs -e '
