@@ -56,10 +56,8 @@ jobs:
           cd docs;
           
           DISPLAY=:0 xvfb-run -s '-screen 0 1024x768x24'
-          julia --color=yes  --project=docs -e '
+          julia --color=yes  --project='.' -e '
             using Pkg
-            Pkg.activate(pwd())
-            Pkg.instantiate()
             Pkg.develop(path="..")
             Pkg.instantiate()
               @eval Module() begin
@@ -68,4 +66,4 @@ jobs:
                 Logging.global_logger(GitHubActions.GitHubActionsLogger())
                 pop!(LOAD_PATH)
             end
-            include("docs/make.jl")' 
+            include("make.jl")' 
