@@ -42,7 +42,13 @@ jobs:
    #       prefix:  DISPLAY=:0 xvfb-run -s '-screen 0 1024x768x24'
     #  env:
     #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
+    - name: Install GitHubActions.jl in its own (shared) environment
+      run: |
+        julia --color=yes -e '
+        using Pkg
+        Pkg.activate("docs-logger-env"; shared=true)
+        Pkg.add(Pkg.PackageSpec(name="GitHubActions", version="0.1"))
+        '
     - name: Build and deploy docs
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -51,8 +57,11 @@ jobs:
           
           DISPLAY=:0 xvfb-run -s '-screen 0 1024x768x24'
           julia --color=yes  --project=docs -e '
-            using Pkg; Pkg.activate(pwd()); Pkg.develop(".."); Pkg.instantiate()
-            using Documenter: DocMeta, doctest
-            using ERPExplorer
-            DocMeta.setdocmeta!(ERPExplorer, :DocTestSetup, :(using ERPExplorer); recursive=true)
-            doctest(ERPExplorer)'
+            using Pkg; Pkg.activate(pwd()); Pkg.develop(path="."); Pkg.instantiate()
+              @eval Module() begin
+                push!(LOAD_PATH, "@docs-logger-env") # access GitHubActions.jl
+                import Logging, GitHubActions
+                Logging.global_logger(GitHubActions.GitHubActionsLogger())
+                pop!(LOAD_PATH)
+            end
+            include("docs/make.jl")' 
