@@ -51,7 +51,7 @@ jobs:
           
           DISPLAY=:0 xvfb-run -s '-screen 0 1024x768x24'
           julia --color=yes  --project=docs -e '
-            using Pkg; Pkg.activate(pwd()); Pkg.dev(".."); Pkg.instantiate()
+            using Pkg; Pkg.activate(pwd()); Pkg.develop(".."); Pkg.instantiate()
             using Documenter: DocMeta, doctest
             using ERPExplorer
             DocMeta.setdocmeta!(ERPExplorer, :DocTestSetup, :(using ERPExplorer); recursive=true)
