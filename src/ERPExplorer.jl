@@ -11,6 +11,7 @@ using GLMakie
 using JLD2 # loading data
 using DataFrames
 using UnfoldMakie
+using Observables
 
 include("slider_topoplot.jl")
 include("click_butterfly_topoplot.jl")

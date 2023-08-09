@@ -60,7 +60,7 @@ function click_butterfly_topoplot(data, pos; title="Interactive topoplot", inter
     labels = ["s$i" for i in 1:sensornum]
     str = lift((i, labels) -> "$(labels[i])", i, labels)
     Label(f[1, 2], str,
-        textsize =36, font = :bold, padding = (0, 0, 0, 50), halign = :center)
+        fontsize =36, font = :bold, padding = (0, 0, 0, 50), halign = :center)
 
     lc = nothing
     on(events(f).mousebutton, priority = 2) do event

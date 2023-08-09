@@ -48,7 +48,7 @@ function slider_butterfly_topoplot(data, pos;
     hidespines!(topo_axis)
 
     Label(f[1, 2], str,
-        textsize =36, font = :bold, padding = (40, 500, 0, 0), halign = :right)
+        fontsize =36, font = :bold, padding = (40, 500, 0, 0), halign = :right)
 
     hidedecorations!(current_axis())
     hidespines!(current_axis())
